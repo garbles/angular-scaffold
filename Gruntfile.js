@@ -13,6 +13,12 @@ module.exports = function(grunt) {
       src: '<%= dir.src %>{,*/}*.js',
       spec: '<%= dir.spec %>{,*/}*.js',
     },
+    concat: {
+      build: {
+        src: ['<%= files.src %>'],
+        dest: '<%= pkg.main %>'
+      }
+    },
     watch: {
       test: {
         files: ['<%= files.src %>', '<%= files.spec %>'],
@@ -21,8 +27,8 @@ module.exports = function(grunt) {
     },
     uglify: {
       build: {
-        src: '<%= files.src %>',
-        dest: '<%= pkg.main %>'
+        src: '<%= pkg.main %>',
+        dest: '<%= pkg.minified %>'
       }
     },
     clean: ['<%= dir.build %>','<%= dir.temp %>'],
@@ -49,7 +55,7 @@ module.exports = function(grunt) {
     },
   });
 
-  grunt.registerTask('build', ['clean', 'test', 'uglify']);
+  grunt.registerTask('build', ['clean', 'test', 'concat', 'uglify']);
   grunt.registerTask('test', ['jshint', 'karma:single']);
   grunt.registerTask('test:continuous', ['jshint', 'karma:continuous']);
 };

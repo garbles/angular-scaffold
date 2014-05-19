@@ -2,7 +2,8 @@
   "name": "angular-scaffold",
   "version": "0.0.1",
   "description": "An angular extension for module scaffolding",
-  "main": "./build/angular-scaffold.min.js",
+  "main": "./build/angular-scaffold.js",
+  "minified": "./build/angular-scaffold.min.js",
   "directories": {
     "test": "test"
   },
@@ -32,6 +33,7 @@
     "karma-jasmine": "~0.1.5",
     "grunt": "~0.4.2",
     "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-jshint": "~0.7.1",
     "grunt-contrib-watch": "~0.5.2",

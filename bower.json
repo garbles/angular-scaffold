@@ -1,11 +1,11 @@
 {
   "name": "angular-scaffold",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Gabriel Scholz <info@garbl.es>"
   ],
   "description": "An angular extension for module scaffolding",
-  "main": "./build/angular-scaffold.min.js",
+  "main": "./build/angular-scaffold.js",
   "keywords": [
     "angular",
     "module",
@@ -14,11 +14,13 @@
   "license": "MIT",
   "homepage": "https://github.com/garbles/angular-scaffold",
   "ignore": [
-    "**/.*",
+    "src",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "karma.conf.js",
+    "package.json",
+    "README.md"
   ],
   "dependencies": {
     "angular": ">= 1.0.0"
