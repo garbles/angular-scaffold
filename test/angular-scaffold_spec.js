@@ -50,5 +50,24 @@ describe('angular-scaffold', function () {
 
       expect(bootstrapApp).not.toThrow();
     });
+
+    it('properly requires plugins a second way', function () {
+      angular.module('pluginOne', [])
+      .value('pluginValueOne', 1);
+
+      angular.module('pluginTwo', [])
+      .value('pluginValueTwo', 2);
+
+      angular.scaffold('app', ['pluginOne'], {
+        account: ['pluginTwo']
+      })
+      .run(function (pluginValueOne, pluginValueTwo) {});
+
+      var bootstrapApp = function () {
+        angular.bootstrap(document, ['app']);
+      }
+
+      expect(bootstrapApp).not.toThrow();
+    });
   });
 });
