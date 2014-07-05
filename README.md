@@ -38,8 +38,7 @@ angular.module('app.pages.directives.bar', []);
 ```javascript
 // Module registration with angular-scaffold
 
-angular.scaffold('app' {
-  'ui.router': true,
+angular.scaffold('app', ['ui.router'], {
   users: {
     controllers: {
       index: []

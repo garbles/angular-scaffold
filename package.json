@@ -1,6 +1,6 @@
 {
   "name": "angular-scaffold",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "An angular extension for module scaffolding",
   "main": "./build/angular-scaffold.js",
   "minified": "./build/angular-scaffold.min.js",
